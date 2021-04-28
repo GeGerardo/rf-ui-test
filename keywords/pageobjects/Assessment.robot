@@ -11,19 +11,24 @@ Start Assessment
 
 Verify if the assessment has started
     [Documentation]  Keyword to check if the assessment started
-    Validate Page Content    ${HEADER_ASSESSMENT}    0071
+    Validate Page Content    ${HEADER_ASSESSMENT}    0073
 
-Select answer for question 1
-    Select Element    ${RADIO_QUESTION_1}
+Verify if answer is saved
+    [Documentation]  Check if the selected answer is saved in the desired question
+    [Arguments]  ${locator}
+    Element Should Be Enabled    ${locator}
 
-Go to the next question
-    [Documentation]  Keyword to go to the next question
-    Select Element    ${NEXT_BUTTON}
+Select radio button answer
+    [Documentation]  Select one radio button in the desired question
+    [Arguments]  ${locator}
+    Select Element    ${locator}
 
-Go to the previous question
-    [Documentation]  Keyword to go to the next question
-    Select Element    ${BACK_BUTTON}
+Change radio button answer
+    [Documentation]  Change the radio button in the desired question
+    [Arguments]  ${locator}
+    Select Element    ${locator}
 
-Go to the review page
-    [Documentation]  Keyword to go to the review page
-    Select Element    ${REVIEW_BUTTON}
+Select checkbox answer
+    [Documentation]  Change the radio button in the desired question
+    [Arguments]  ${locator}
+    Select Element    ${locator}

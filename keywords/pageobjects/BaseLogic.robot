@@ -1,5 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
+Library    RobotEyes
 
 *** Keywords ***
 Validate Page Content
@@ -15,7 +16,7 @@ Select Element
     Wait Until Element Is Visible    ${locator}
     Click Element    ${locator}
 
-Insert Information
+Insert Text Information
     [Documentation]  Keyword responsible for input function on an element and waiting for the element to be visible.
     [Arguments]  ${locator}   ${text}
     Wait Until Element Is Visible  ${locator}
@@ -33,14 +34,19 @@ Insert Pass
     Wait Until Element Is Visible  ${locator}
     Input Text  ${locator}   ${pass}
 
-Dropdown by Value
+Dropdown List by Value
     [Documentation]  Keyword responsible for the selection of an option in a dropdown list
     [Arguments]  ${locator}  ${value}
     Wait Until Element Is Visible    ${locator}
     Select From List By Value    ${locator}   ${value}
 
-Radio Button Choice
-    [Documentation]  Keyword responsible for the click function on an element and waiting for the element to be visible.
-    [Arguments]  ${locator}
-    Wait Until Element Is Visible    ${locator}
-    Click Element    ${locator}
+Visual Test Comparison
+    [Documentation]  Check if the user is redirected to the correct using screenshot
+    Capture Full Screen
+    Compare Images
+
+#Radio Button Choice
+    #[Documentation]  Keyword responsible for the click function on an element and waiting for the element to be visible.
+    #[Arguments]  ${locator}
+    #Wait Until Element Is Visible    ${locator}
+    #Click Element    ${locator}
