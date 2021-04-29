@@ -46,4 +46,4 @@ Go to Question 10 and select more than one checkbox
 
 Go to the review page and submit
     Go to the review page
-    #Select Element    ${SUBMIT_BUTTON}
+    Select Element    ${SUBMIT_BUTTON}

@@ -20,11 +20,3 @@ Login with valid user and password
     Dropdown List by Value    ${DROP_LANGUAGE}    ${LANGUAGE}
     Click Button    ${LOGIN_BUTTON}
     Validate Page Content    ${USER_ID}    ${id_number}
-
-Invalid Login Scenarios
-    Select Element    ${REGISTERED_USER}
-    Insert User    ${USERNAME}    ${user_name}
-    Insert Pass    ${PASSWORD}    ${pass}
-    Dropdown List by Value    ${DROP_LANGUAGE}    ${LANGUAGE}
-    Click Button    ${LOGIN_BUTTON}
-    Element Should Contain    ${LOGIN_WARNING}    ${error_msg}
