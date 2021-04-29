@@ -1,6 +1,5 @@
 *** Settings ***
 Library  SeleniumLibrary
-#Library  RobotEyes
 
 *** Keywords ***
 Begin Web Test

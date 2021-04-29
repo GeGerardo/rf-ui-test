@@ -16,7 +16,7 @@ Select Element
     Wait Until Element Is Visible    ${locator}
     Click Element    ${locator}
 
-Insert Text Information
+Fill Text Information
     [Documentation]  Keyword responsible for input function on an element and waiting for the element to be visible.
     [Arguments]  ${locator}   ${text}
     Wait Until Element Is Visible  ${locator}
@@ -42,6 +42,8 @@ Dropdown List by Value
 
 Visual Test Comparison
     [Documentation]  Check if the user is redirected to the correct using screenshot
+    [Arguments]  ${locator}
+    Wait Until Element Is Visible    ${locator}
     Capture Full Screen
     Compare Images
 

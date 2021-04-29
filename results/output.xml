@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on darwin)" generated="20210429 16:07:00.701" rpa="false" schemaversion="2">
+<suite id="s1" name="Visual Login Test" source="/Users/kraken/Documents/GitHub/inspera/tests/Visual_Login_Test.robot">
+<kw name="Begin Web Test" library="CommonConfig" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210429 16:07:01.005" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210429 16:07:01.005" endtime="20210429 16:07:03.359"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210429 16:07:03.359" endtime="20210429 16:07:03.503"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:01.005" endtime="20210429 16:07:03.504"/>
+</kw>
+<test id="s1-t1" name="Login Screen Validation">
+<kw name="Navigates To" library="LoginPage">
+<doc>Leads the test to the desired page and initialize the RbotEyes library</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210429 16:07:03.506" level="INFO">Opening url 'https://demo.inspera.no/'</msg>
+<status status="PASS" starttime="20210429 16:07:03.506" endtime="20210429 16:07:04.457"/>
+</kw>
+<kw name="Open Eyes" library="RobotEyes">
+<arg>SeleniumLibrary</arg>
+<arg>${PRECISION_IMAGE}</arg>
+<msg timestamp="20210429 16:07:04.464" level="INFO">roboteyestestfolder: Login_Screen_Validation</msg>
+<status status="PASS" starttime="20210429 16:07:04.457" endtime="20210429 16:07:04.464"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:03.505" endtime="20210429 16:07:04.464"/>
+</kw>
+<kw name="Visual Test Comparison" library="BaseLogic">
+<arg>${REGISTERED_USER}</arg>
+<doc>Check if the user is redirected to the correct using screenshot</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:04.465" endtime="20210429 16:07:04.698"/>
+</kw>
+<kw name="Capture Full Screen" library="RobotEyes">
+<status status="PASS" starttime="20210429 16:07:04.698" endtime="20210429 16:07:05.700"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<msg timestamp="20210429 16:07:07.355" level="INFO">Comparison output: b'104.533 (0.00159507) @ 0,0'</msg>
+<status status="PASS" starttime="20210429 16:07:05.700" endtime="20210429 16:07:07.356"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:04.464" endtime="20210429 16:07:07.356"/>
+</kw>
+<kw name="Login with valid user and password" library="LoginPage">
+<doc>Check if the user can login with valid inputs and change the language option</doc>
+<kw name="Select Element" library="BaseLogic">
+<arg>${REGISTERED_USER}</arg>
+<doc>Keyword responsible for the click function on an element and waiting for the element to be visible.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:07.358" endtime="20210429 16:07:07.378"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:07.378" level="INFO">Clicking element 'id=loginWithLocalUserTrigger'.</msg>
+<status status="PASS" starttime="20210429 16:07:07.378" endtime="20210429 16:07:07.471"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.357" endtime="20210429 16:07:07.471"/>
+</kw>
+<kw name="Insert User" library="BaseLogic">
+<arg>${USERNAME}</arg>
+<arg>${login_id}</arg>
+<doc>Keyword responsible for input a user on an element and waiting for the element to be visible.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:07.472" endtime="20210429 16:07:07.488"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:07.488" level="INFO">Typing text '76260211' into text field 'css=.input.userName.form-control'.</msg>
+<status status="PASS" starttime="20210429 16:07:07.488" endtime="20210429 16:07:07.582"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.471" endtime="20210429 16:07:07.582"/>
+</kw>
+<kw name="Insert Pass" library="BaseLogic">
+<arg>${PASSWORD}</arg>
+<arg>${pass}</arg>
+<doc>Keyword responsible for input a pass on an element and waiting for the element to be visible.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:07.583" endtime="20210429 16:07:07.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:07.598" level="INFO">Typing text 'hm87' into text field 'css=.input.password.form-control.show-pw'.</msg>
+<status status="PASS" starttime="20210429 16:07:07.598" endtime="20210429 16:07:07.664"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.583" endtime="20210429 16:07:07.665"/>
+</kw>
+<kw name="Dropdown List by Value" library="BaseLogic">
+<arg>${DROP_LANGUAGE}</arg>
+<arg>${LANGUAGE}</arg>
+<doc>Keyword responsible for the selection of an option in a dropdown list</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:07.665" endtime="20210429 16:07:07.681"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210429 16:07:07.681" level="INFO">Selecting options from selection list 'id=languageIdSelect' by value en_us.</msg>
+<status status="PASS" starttime="20210429 16:07:07.681" endtime="20210429 16:07:07.754"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.665" endtime="20210429 16:07:07.755"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:07.755" level="INFO">Clicking button 'css=.btn.btn-primary.login-btn'.</msg>
+<status status="PASS" starttime="20210429 16:07:07.755" endtime="20210429 16:07:07.814"/>
+</kw>
+<kw name="Validate Page Content" library="BaseLogic">
+<arg>${USER_ID}</arg>
+<arg>${id_number}</arg>
+<doc>Keyword responsible for check string content in the page</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:07.815" endtime="20210429 16:07:08.926"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ElementText}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:08.943" level="INFO">${ElementText} = 0078</msg>
+<status status="PASS" starttime="20210429 16:07:08.926" endtime="20210429 16:07:08.943"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${ElementText}</arg>
+<arg>${string}</arg>
+<arg>ignore_case=true</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210429 16:07:08.943" endtime="20210429 16:07:08.944"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.815" endtime="20210429 16:07:08.944"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:07.357" endtime="20210429 16:07:08.944"/>
+</kw>
+<kw name="Visual Test Comparison" library="BaseLogic">
+<arg>${USER_ID}</arg>
+<doc>Check if the user is redirected to the correct using screenshot</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:08.945" endtime="20210429 16:07:08.957"/>
+</kw>
+<kw name="Capture Full Screen" library="RobotEyes">
+<status status="PASS" starttime="20210429 16:07:08.957" endtime="20210429 16:07:09.195"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<msg timestamp="20210429 16:07:11.806" level="INFO">Comparison output: b'0 (0) @ 0,0'
+Comparison output: b'104.533 (0.00159507) @ 0,0'</msg>
+<status status="PASS" starttime="20210429 16:07:09.195" endtime="20210429 16:07:11.806"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:08.944" endtime="20210429 16:07:11.806"/>
+</kw>
+<doc>Login with a valid user and does a CSS Visual Validation</doc>
+<status status="PASS" starttime="20210429 16:07:03.504" endtime="20210429 16:07:11.807"/>
+</test>
+<test id="s1-t2" name="Begin Assessment questions">
+<kw name="Start Assessment" library="Assessment">
+<doc>Keyword responsible for start the assessment test flow</doc>
+<kw name="Select Element" library="BaseLogic">
+<arg>${START_ASSESSMENT}</arg>
+<doc>Keyword responsible for the click function on an element and waiting for the element to be visible.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:11.810" endtime="20210429 16:07:11.828"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:11.829" level="INFO">Clicking element 'css=.btn.btn-primary.startExam'.</msg>
+<status status="PASS" starttime="20210429 16:07:11.829" endtime="20210429 16:07:12.396"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:11.809" endtime="20210429 16:07:12.396"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:11.809" endtime="20210429 16:07:12.396"/>
+</kw>
+<kw name="Verify if the assessment has started" library="Assessment">
+<doc>Keyword to check if the assessment started</doc>
+<kw name="Validate Page Content" library="BaseLogic">
+<arg>${HEADER_ASSESSMENT}</arg>
+<arg>${id_number}</arg>
+<doc>Keyword responsible for check string content in the page</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:12.398" endtime="20210429 16:07:12.922"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ElementText}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210429 16:07:12.942" level="INFO">${ElementText} = 0078 ANONYMOUS USER</msg>
+<status status="PASS" starttime="20210429 16:07:12.922" endtime="20210429 16:07:12.942"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${ElementText}</arg>
+<arg>${string}</arg>
+<arg>ignore_case=true</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210429 16:07:12.943" endtime="20210429 16:07:12.943"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:12.397" endtime="20210429 16:07:12.943"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:12.397" endtime="20210429 16:07:12.943"/>
+</kw>
+<kw name="Visual Test Comparison" library="BaseLogic">
+<arg>${FIRST_PAGE_CHECK}</arg>
+<doc>Check if the user is redirected to the correct using screenshot</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210429 16:07:12.944" endtime="20210429 16:07:13.397"/>
+</kw>
+<kw name="Capture Full Screen" library="RobotEyes">
+<status status="PASS" starttime="20210429 16:07:13.397" endtime="20210429 16:07:13.724"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<msg timestamp="20210429 16:07:17.236" level="INFO">Comparison output: b'2364.64 (0.0360821) @ 0,0'
+Comparison output: b'0 (0) @ 0,0'
+Comparison output: b'104.533 (0.00159507) @ 0,0'</msg>
+<status status="PASS" starttime="20210429 16:07:13.724" endtime="20210429 16:07:17.236"/>
+</kw>
+<status status="PASS" starttime="20210429 16:07:12.944" endtime="20210429 16:07:17.237"/>
+</kw>
+<doc>Start Assessment test and does a CSS Visual Validation</doc>
+<status status="PASS" starttime="20210429 16:07:11.808" endtime="20210429 16:07:17.237"/>
+</test>
+<doc>Test Suite to visually verify the Login Screen, user screen and first page of a test</doc>
+<status status="PASS" starttime="20210429 16:07:00.702" endtime="20210429 16:07:17.238"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Visual Login Test">Visual Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
