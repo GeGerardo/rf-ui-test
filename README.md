@@ -93,6 +93,7 @@ To change the login id, password, testing browser(Chrome, Safari, Firefox, Edge)
 1. To run all the test suites
 
 `robot -d results -v images_dir:base_image tests`
+
 2. To run a specific test suite
 
 `robot -d results -v images_dir:base_image tests/suite_name.robot`
