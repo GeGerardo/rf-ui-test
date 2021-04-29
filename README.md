@@ -41,7 +41,7 @@ The automation script are divided by the following folders:
 - results: Where the `report.html` and the `visualReport.html` are saved.
 - tests: Where the 3 different Test Suites are present.
 - variables: Where general configuration as user id, password, screenshot analyse threshold, url, locators and others are stored.
-<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/folders.png" width="150">
+<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/folders.png" width="200">
 
 ### Prerequisites
 
@@ -103,13 +103,8 @@ To change the login id, password, testing browser(Chrome, Safari, Firefox, Edge)
 4. Results will be saved in the results' folder.
 
 * Open the report.html with a browser to see the full report from Robot Framework
-![report-screenshot]
+<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/report.png" width="600">
   
 
 * Open the visualReport.html with a browser to see the `CSS_Visual_Test.robot`
-![visual-screenshot]
-
-
-[report-screenshot]: git_images/report.png
-[visual-screenshot]: git_images/visualreport.png
-[folders-screenshot]: git_images/folders.png
+<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/visualreport.png" width="600">
