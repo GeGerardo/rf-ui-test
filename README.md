@@ -41,7 +41,7 @@ The automation script are divided by the following folders:
 - results: Where the `report.html` and the `visualReport.html` are saved.
 - tests: Where the 3 different Test Suites are present.
 - variables: Where general configuration as user id, password, screenshot analyse threshold, url, locators and others are stored.
-<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/folders.png" width="48">
+<img src="https://github.com/GeGerardo/inspera/blob/main/git_images/folders.png" width="100">
 
 ### Prerequisites
 
