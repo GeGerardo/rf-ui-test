@@ -1,4 +1,4 @@
-# Job Application - XENETA
+# Job Application - Inspera
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -25,9 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Project created for a QA job application at Xeneta.
-
-**The functional checks are written in the xls file**
+Project created for a QA Automation job application at Inspera.
 
 ### Built With
 
@@ -39,10 +37,10 @@ Project created for a QA job application at Xeneta.
 ## Getting Started
 The automation script are divided by the following folders:
 - base_image: Where the base image is saved to compare with the test results from the `CSS_Visual_Test.robot`
-- variables: Where general configuration as user id, password, screenshot analyse threshold, url, locators and others are stored.
 - keywords: Where we have the methods and Page Objects specifications.
-- tests: Where the 3 different Test Suites are present.
 - results: Where the `report.html` and the `visualReport.html` are saved.
+- tests: Where the 3 different Test Suites are present.
+- variables: Where general configuration as user id, password, screenshot analyse threshold, url, locators and others are stored.
 ![folders-screenshot]
 
 ### Prerequisites
