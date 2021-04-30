@@ -8,7 +8,7 @@ Resource    ../keywords/pageobjects/NavigationActions.robot
 Resource    ../variables/locators.robot
 
 Suite Setup  Begin Web Test
-#Suite Teardown  End Web Test
+Suite Teardown  End Web Test
 
 
 
