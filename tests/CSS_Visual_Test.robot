@@ -20,7 +20,7 @@ Login Screen Validation
     Login with valid user and password
     Visual Test Comparison    ${USER_ID}
 
-Begin Assessment questions
+Assessment Screen Validation
     [Documentation]  Start Assessment test and does a CSS Visual Validation
     Start Assessment
     Verify if the assessment has started

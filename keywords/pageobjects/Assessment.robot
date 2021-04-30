@@ -28,3 +28,9 @@ Change radio button answer
     [Documentation]  Change the radio button in the desired question
     [Arguments]  ${locator}
     Select Element    ${locator}
+
+Reset answer
+    [Documentation]  Reset the question answer
+    [Arguments]  ${locator}
+    Wait Until Element Is Visible    ${RESET_BUTTON}
+    Select Element    ${RESET_BUTTON}
