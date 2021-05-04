@@ -70,7 +70,7 @@ Before running any script, the following dependencies must be installed:
 * **Imagemagick**: Used to compare the screenshots and check any visual bugs
 
 **For mac:**
-  `pip install robotframework-eyes`
+  `brew install imagemagick`
 
 **For linux:**
 `apt-get install imagemagick`
