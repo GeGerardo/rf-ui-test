@@ -1,4 +1,4 @@
-# Job Application - Inspera
+# Robot Framework with UI test
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -25,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Project created for a QA Automation job application at Inspera.
+
 
 ### Built With
 
